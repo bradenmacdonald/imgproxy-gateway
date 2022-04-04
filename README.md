@@ -27,4 +27,10 @@ Start it with a command like this:
 IMGPROXY_KEY=6E656F6C616365313233 IMGPROXY_SALT=6E656F73616C74 deno run --allow-env --allow-net --watch mod.ts
 ```
 
+or to use Docker:
+
+```
+docker run --rm -e IMGPROXY_KEY=6E656F6C616365313233 -e IMGPROXY_SALT=6E656F73616C74 -e IMGPROXY_GATEWAY_IMGPROXY_URL=http://imgproxy:5557 -p 5558:5558 ghcr.io/neolace-dev/improxy-gateway:latest
+```
+
 Then go to e.g. http://localhost:5558/_6y8O8Hrd2jP3kuKxzMnzWb_5gUszkTOAUFVvb5Tc5uBpW?width=1000

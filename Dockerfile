@@ -1,7 +1,7 @@
 FROM denoland/deno:alpine-1.20.4
 WORKDIR /imgproxy-gateway
 ENV DENO_DIR /imgproxy-gateway/deno_dir
-RUN mkdir /neolace/deno_dir
+RUN mkdir /imgproxy-gateway/deno_dir
 
 COPY mod.ts /imgproxy-gateway/mod.ts
 
