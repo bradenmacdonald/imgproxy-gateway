@@ -136,6 +136,7 @@ async function handler(req: Request): Promise<Response> {
             return makeErrorResponse(`Streaming ${url.pathname} from imgproxy failed: ${err.message}`);
         }
     } else {
+        console.log(` -> Redirecting to underlying object store for ${url.pathname}`);
         // Redirect this to the underlying object storage.
         return new Response("", {
             status: 301,
